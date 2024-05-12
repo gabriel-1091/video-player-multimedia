@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Proiect Multimedia - Player Video</title>
+
+    <!--Atasez fisierul CSS-->
+    <link rel="stylesheet" href="2_1091_POPESCU_Gabriel.css" />
+
+    <!--Integrez biblioteca FontAwesome-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet" />
+  </head>
+
+  <body>
+    <h3 class="heading">Proiect Multimedia - Player Video</h3>
+
+    <div class="container">
+      <div class="main-video">
+        <div class="video-container">
+          <video src="media/guitar player.mp4" paused></video>
+          <canvas id="previewCanvas"></canvas>
+          <canvas id="canvasButoane" class="canvas"></canvas>
+
+          <div class="progress-container">
+            <div class="progress-bar" id="progressBar">
+              <div class="played-progress" id="playedProgress"></div>
+              <div class="remaining-progress" id="remainingProgress"></div>
+            </div>
+            <div class="time-display" id="timeDisplay">00:00 / 00:00</div>
+          </div>
+
+          <button class="play-button" id="playButton"></button>
+          <button class="next-button" id="nextButton"></button>
+          <button class="mute-button" id="muteButton">
+            <i id="volumeIcon" class="fas fa-volume-up"></i>
+          </button>
+
+          <div class="volume-slider-container" id="volumeSliderContainer">
+            <input type="range" id="volumeSlider" min="0" max="100" step="1" />
+          </div>
+
+          <button class="fullscreen-button" id="fullscreenButton">
+            <i id="fullscreenIcon" class="fas fa-expand"></i>
+          </button>
+
+        </div>
+
+        <div class="title-container">
+          <h3 class="title">01. Guitar player in a band</h3>
+        </div>
+      </div>
+
+      <div class="video-list">
+        <div class="vid active">
+          <video src="media/guitar player.mp4" paused></video>
+          <h3 class="title">01. Guitar player in a band</h3>
+        </div>
+
+        <div class="vid" draggable="true">
+          <video src="media/white car passing by.mp4" paused></video>
+          <h3 class="title">02. White car passing by</h3>
+        </div>
+
+        <div class="vid" draggable="true">
+          <video src="media/people in london.mp4" paused></video>
+          <h3 class="title">03. People in London</h3>
+        </div>
+
+        <div class="vid" draggable="true">
+          <video src="media/20th Century Fox Intro HD.webm" paused></video>
+          <h3 class="title">04. 20th Century Fox intro HD</h3>
+        </div>
+
+        <div class="vid" draggable="true">
+          <video src="media/video2.mp4" paused></video>
+          <h3 class="title">05. Cow in nature</h3>
+        </div>
+      </div>
+
+      <!-- Spatiu gol pentru aranjarea butoanelor in pagina -->
+      <div class="spacer"></div>
+
+      <div class="button-container">
+        <input
+          type="file"
+          id="fileInput"
+          accept="video/*"
+          style="display: none"
+        />
+        <button id="addButton">Add video <i class="fas fa-plus"></i></button>
+        <button id="deleteButton">Delete video <i class="fas fa-trash"></i></button>
+        <button id="infoButton"><i class="fas fa-info-circle"></i></button>
+      </div>
+
+      <!-- Notificari adaugare/stergere  videoclipuri-->
+      <div class="notification" id="notification">
+        Videoclip adaugat cu succes!
+      </div>
+      <div class="notification2" id="notification2">
+        Videoclip sters cu succes!
+      </div>
+    </div>
+
+    <!-- Atasez fisierul JavaScript -->
+    <script src="2_1091_POPESCU_Gabriel.js"></script>
+  </body>
+</html>
